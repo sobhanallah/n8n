@@ -1,33 +1,8 @@
-mymath
-======
+# ProductCard
 
-A tiny utility package that provides a single function `average(numbers)` to
-compute the arithmetic mean of an iterable of numbers.
+این UI یک کارت محصول استاندارد با ساختار DIG (دیگ) است که بخش سرصفحه (CardHeader) شامل عنوان، توضیح کوتاه و آیکون سبد خرید به‌عنوان اکشن فراهم می‌کند. برای آیکون، از Digcheh با نام "shopping-cart" در جایگاه CardAction استفاده شده است تا نیاز رایج فروشگاه‌ها (افزودن به سبد) به‌درستی پوشش داده شود.
 
-Behavior
---------
-- Accepts any iterable of numeric types that implement the Real ABC (ints,
-  floats, Decimal, Fraction, etc.). Generators and other non-sized iterables
-  are supported (the iterable will be consumed).
-- Returns the arithmetic mean. The precise return numeric type depends on the
-  input types: averaging Decimal objects typically returns a Decimal, likewise
-  Fraction inputs produce a Fraction. For plain ints/floats the result will
-  follow normal Python numeric promotion (commonly a float).
-- Raises ValueError("numbers must not be empty") if the input iterable is
-  empty.
-- If elements are of incompatible or non-numeric types, Python arithmetic
-  operations will raise a TypeError.
+- **کامپوننت:** Card (کارت دیگ)
+- **آیکون:** shopping-cart از Digcheh
 
-Example
--------
-
-from mymath import average
-
-print(average([1, 2, 3]))  # 2.0
-
-Running tests
--------------
-
-Install pytest if needed, then run:
-
-pytest -q
+کامپوننت ساختاریافته و قابل توسعه برای افزودن جزئیات بیشتر محصول مانند تصویر، قیمت و ویژگی‌هاست.
